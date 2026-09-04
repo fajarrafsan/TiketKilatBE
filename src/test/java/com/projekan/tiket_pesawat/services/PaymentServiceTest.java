@@ -337,6 +337,9 @@ class PaymentServiceTest {
     @Test
     void snapTokenIsPersistedSoOtherTabsCanContinueThePayment() {
         Booking booking = booking();
+        booking.getPenumpang().setNama("Test Traveler");
+        booking.getPenumpang().setNoHP("08000000000");
+        booking.setPenerbangan(Penerbangan.builder().id(1L).kotaKeberangkatan("Jakarta").kotaTujuan("Bali").build());
         givenBooking(booking);
 
         try (var snap = mockStatic(SnapApi.class)) {
