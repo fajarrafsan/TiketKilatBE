@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Verifikasi Akses</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f8fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e6ecf0;
+        }
+
+        .header h1 {
+            color: #2a9d8f;
+        }
+
+        .content {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .token-box {
+            background-color: #e0f7fa;
+            border-left: 5px solid #2a9d8f;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+            border-radius: 8px;
+        }
+
+        .note {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #2a9d8f;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        .button:hover {
+            background-color: #21867a;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <div class="header">
+        <h1>Verifikasi Akses Anda</h1>
+    </div>
+    <div class="content">
+        <p>Hai <strong>{{email}}</strong>,</p>
+        <p>Berikut adalah kode akses sementara Anda. Jangan bagikan kode ini kepada siapa pun, termasuk pihak yang mengaku dari kami.</p>
+
+        <div class="token-box">{{token}}</div>
+
+        <p>Jika Anda tidak meminta kode ini, Anda dapat mengabaikan email ini atau segera menghubungi tim kami.</p>
+
+        <div class="note">
+            Token juga dapat digunakan untuk melakukan refresh jika dibutuhkan:
+            <br>
+            <code>{{refreshToken}}</code>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 Aplikasi Anda – Semua hak dilindungi.
+    </div>
+</div>
+</body>
+</html>

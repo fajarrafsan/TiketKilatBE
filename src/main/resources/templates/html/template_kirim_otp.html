@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kode OTP - Verifikasi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 480px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            color: #333333;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        .otp-box {
+            text-align: center;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            color: #2980b9;
+            margin-bottom: 30px;
+        }
+        .note {
+            font-size: 14px;
+            color: #7f8c8d;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #bdc3c7;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/OTP_logo_2018.svg/512px-OTP_logo_2018.svg.png" alt="Logo OTP">
+        </div>
+        <div class="title">Kode OTP Anda</div>
+        <div class="subtitle">Digunakan untuk reset password akun Anda</div>
+
+        <div class="otp-box">{{otp}}</div>
+
+        <div class="note">Kode ini berlaku selama <strong>{{waktuKode}}</strong> menit.</div>
+        <div class="note">Dikirim pada: <span>{{waktu_sekarang}}</span></div>
+
+        <div class="footer">
+            Jika Anda tidak meminta kode ini, abaikan email ini.<br/>
+            &copy; 2025 TiketKilat. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
