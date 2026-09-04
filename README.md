@@ -1,6 +1,4 @@
-Tentu! Ini saya buatkan draft **README.md** untuk proyek tiket pesawat yang kamu minta:
 
----
 
 # ✈️ Aplikasi Tiket Pesawat
 
